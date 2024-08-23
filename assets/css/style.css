@@ -175,8 +175,8 @@ body {
 }
 @media (max-width: 991px) {
     .filter-age {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+        /* flex-wrap: nowrap;
+        overflow-x: scroll; */
     }
 }
 
@@ -650,6 +650,9 @@ body {
         gap: 0;
     }
     .dropdown-mob-hide {
+        display: none;
+    }
+    .dropdown.dropdown_sorting.dropdown-open .dropdown__button {
         display: none;
     }
     .filters__dropdown.dropdown-sorting-hide>.dropdown_sorting {
