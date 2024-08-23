@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="assets/css/minireset.min.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="true-container">
+        <h1 class="catalog-header">Детская одежда Gulliver</h1>
+        <div class="catalog">
+            <div class="catalog__side">
+                side
+            </div>
+            <div class="catalog__content">
+
+                <div class="filter-age">
+                    <div class="filter-age__header">Возраст:</div>
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">1-3 мес</span>
+                    </label>  
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">3-6 мес</span>
+                    </label>  
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">9-12 мес</span>
+                    </label>  
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">9-12 мес</span>
+                    </label>  
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">9-12 мес</span>
+                    </label>  
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">9-12 мес</span>
+                    </label>  
+                    <label class="filter-age__label">
+                        <input class="filter-age__input" type="checkbox">
+                        <span class="filter-age__name">9-12 мес</span>
+                    </label>  
+
+                </div>
+
+                <div class="popup-triggers">
+                    <div class="popup-triggers__devider"></div>
+                    <button class="popup-triggers__item_filters">Фильтры</button>
+                    <button class="popup-triggers__item_sort">Сортировка</button>
+                </div>
+
+                <div class="filters">
+
+                    <div class="filters__header">
+                        <button class="filters__close-button"></button>
+                        <span>Фильтры</span>
+                    </div>
+
+                    <div class="filters__dropdown">
+
+                        <div class="dropdown dropdown_sorting">
+                            <button class="dropdown__button">Сортировка: Мы рекомендуем</button>
+                            <div class="dropdown__content">
+                                <div class="dropdown__items">
+                                    <div class="radiobox">
+                                        <label class="radiobox__label">
+                                            <input class="radiobox__input" type="radio" name="sort" checked>
+                                            <span class="radiobox__name">Мы рекомендуем</span>
+                                        </label>   
+                                    </div>
+                                    <div class="radiobox">
+                                        <label class="radiobox__label">
+                                            <input class="radiobox__input" type="radio" name="sort">
+                                            <span class="radiobox__name">Популярность</span>
+                                        </label>   
+                                    </div>
+                                    <div class="radiobox">
+                                        <label class="radiobox__label">
+                                            <input class="radiobox__input" type="radio" name="sort">
+                                            <span class="radiobox__name">Сначала дешевле</span>
+                                        </label>   
+                                    </div>
+                                    <div class="radiobox">
+                                        <label class="radiobox__label">
+                                            <input class="radiobox__input" type="radio" name="sort">
+                                            <span class="radiobox__name">Сначала дороже</span>
+                                        </label>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="dropdown__button">Пол</button>
+                            <div class="dropdown__content">
+                                <div class="dropdown__items">
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">Мальчики</span>
+                                        </label>   
+                                        <span class="checkbox__count">1000</span>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">Девочки</span>
+                                        </label>   
+                                        <span class="checkbox__count">900</span>
+                                    </div>
+                                </div>
+                                <button class="dropdown__apply">Применить</button>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="dropdown__button">Бренд</button>
+                            <div class="dropdown__content">
+                                <input type="text" class="dropdown__search" placeholder="Искать">
+                                <div class="dropdown__items">
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">Gulliver</span>
+                                        </label>   
+                                        <span class="checkbox__count">1</span>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">BT21</span>
+                                        </label>   
+                                        <span class="checkbox__count">150</span>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">AquaDabra</span>
+                                        </label>   
+                                        <span class="checkbox__count">90</span>
+                                    </div>
+                                </div>
+                                <button class="dropdown__apply">Применить</button>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropdown_sizes">
+                            <button class="dropdown__button">Размер</button>
+                            <div class="dropdown__content">
+                                <div class="dropdown__items">
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox" checked>
+                                            <span class="checkbox__name">10</span>
+                                        </label>   
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">11</span>
+                                        </label>   
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">12</span>
+                                        </label>   
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">13</span>
+                                        </label>   
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">14</span>
+                                        </label>   
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">15</span>
+                                        </label>   
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox__label">
+                                            <input class="checkbox__input" type="checkbox">
+                                            <span class="checkbox__name">16</span>
+                                        </label>   
+                                    </div>
+
+                                </div>
+                                <button class="dropdown__apply">Применить</button>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropdown_one_checkbox">
+                            <div class="checkbox">
+                                <label class="checkbox__label">
+                                    <input class="checkbox__input" type="checkbox">
+                                    <span class="checkbox__name">Последний размер</span>
+                                </label>   
+                            </div>
+                        </div>
+
+                        <button class="filters__clear-button">Очистить фильтры</button>
+
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="catalog__grid">
+                        <div class="catalog__card">
+                            1
+                        </div>
+                        <div class="catalog__card">
+                            2
+                        </div>
+                        <div class="catalog__card">
+                            3
+                        </div>
+                        <div class="catalog__card">
+                            4
+                        </div>
+                        <div class="catalog__card">
+                            5
+                        </div>
+                        <div class="catalog__card">
+                            6
+                        </div>
+                        <div class="catalog__card">
+                            7
+                        </div>
+                        <div class="catalog__card">
+                            8
+                        </div>
+                        <div class="catalog__card">
+                            9
+                        </div>
+                        <div class="catalog__card">
+                            10
+                        </div>
+                        <div class="catalog__card">
+                            12
+                        </div>
+                        <div class="catalog__card">
+                            13
+                        </div>
+                        <div class="catalog__card">
+                            14
+                        </div>
+                        <div class="catalog__card">
+                            15
+                        </div>
+                        <div class="catalog__card">
+                            16
+                        </div>
+                        <div class="catalog__card">
+                            17
+                        </div>
+                        <div class="catalog__card">
+                            18
+                        </div>
+                        <div class="catalog__card">
+                            19
+                        </div>
+                        <div class="catalog__card">
+                            20
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
