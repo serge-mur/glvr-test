@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll('.dropdown').forEach(el => {
                     if (element !== el) {
                         el.classList.remove('dropdown-open');
-                        el.classList.toggle('dropdown-mob-hide');
+                        if(!el.classList.contains('dropdown_sorting')) {
+                            el.classList.toggle('dropdown-mob-hide');
+                        }
                     }
                 });           
                 element.classList.toggle('dropdown-open');
