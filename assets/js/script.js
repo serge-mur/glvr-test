@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     document.querySelectorAll('.dropdown').forEach(element => {
-
         if(!element.classList.contains('dropdown_one_checkbox')) {
 
             element.querySelector('.dropdown__button').addEventListener("click", () => {
@@ -31,9 +30,31 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });           
                 element.classList.toggle('dropdown-open');
-            });            
+            });  
+        }
+    });
+
+    document.querySelectorAll('.dropdown.dropdown_sorting .radiobox').forEach(el => {
+        el.querySelector('.radiobox__input').addEventListener("change", () => {
+                let activeSort = el.querySelector('.radiobox__name').innerText;
+                document.querySelector('.dropdown_sorting .dropdown__button .active-sort').textContent = activeSort;
+        });
+    });
+
+    document.querySelectorAll('.dropdown:not(.dropdown_sorting):not(.dropdown_one_checkbox)').forEach(element => {
+        let checkbox = element.querySelectorAll('.checkbox__input');
+        let checkboxCount = 0;
+        // console.log(checkbox.length);
+        checkbox.forEach(el => {
+            if (el.checked) {
+                checkboxCount =+1;
+            } else {}
+        });
+        if (checkboxCount>0) {
+            element.classList.add('dropdown_fill');
+            element.querySelector('.dropdown__count').innerText = checkboxCount;   
         }
 
-    });
+    });  
 
 });

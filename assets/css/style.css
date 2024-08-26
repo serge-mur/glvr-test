@@ -64,6 +64,16 @@ body {
     }
 }
 
+.filters-wrapper {
+    background-color: #fff;
+    padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+    .filters-wrapper {
+        position: sticky;
+        top: 0;
+    }
+}
 /* popup triggers */
 .popup-triggers {
     position: relative;
@@ -182,7 +192,7 @@ body {
 
 /* filters */
 .filters {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .filters__header {
     position: relative;
