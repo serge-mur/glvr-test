@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.filters__header>span').textContent = 'Фильтры';
         document.querySelector('.filters__dropdown').classList.remove('dropdown-filters-hide');
         document.querySelector('.filters__dropdown').classList.add('dropdown-sorting-hide');
+        document.querySelector('.filters__mob-buttons').style.display = 'block';
     });
     document.querySelector('.popup-triggers__item_sort').addEventListener("click", () => {
         document.querySelector('.filters').classList.toggle('filters-open');
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.filters__dropdown').classList.remove('dropdown-sorting-hide');
         document.querySelector('.filters__dropdown').classList.add('dropdown-filters-hide');
         document.querySelector('.dropdown_sorting').classList.add('dropdown-open');
+        document.querySelector('.filters__mob-buttons').style.display = 'none';
     });
     document.querySelector('.filters__close-button').addEventListener("click", () => {
         document.querySelector('.filters').classList.toggle('filters-open');
@@ -56,5 +58,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });  
+
+
+    document.querySelectorAll('.dropdown').forEach(element => {
+        let input = element.querySelector('.dropdown__search');
+        if(input) {
+            input.addEventListener('input', () => {
+                let dropdown_items = document.querySelector('.dropdown__search+.dropdown__items').querySelectorAll('.checkbox__name');
+                if (!dropdown_items)
+                    return false;
+                for (let i=0; i<dropdown_items.length; i++) {
+                    if (dropdown_items[i].innerHTML.toUpperCase().includes(input.value.toUpperCase()))
+                        dropdown_items[i].closest('.checkbox').style.display = 'flex';
+                    else
+                        dropdown_items[i].closest('.checkbox').style.display = 'none';
+                }
+            });            
+        }
+    });
 
 });
