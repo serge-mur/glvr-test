@@ -77,4 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    var toggler = document.querySelectorAll('.catalog-menu__fold>a');
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".catalog-menu__nested").classList.toggle('catalog-menu__active');
+        this.classList.toggle('catalog-menu__fold_open');
+    });
+    }
+
 });

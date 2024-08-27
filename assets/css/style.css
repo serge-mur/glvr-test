@@ -30,7 +30,6 @@ body {
 
 .catalog__side {
     width: 269px;
-    background-color: beige;
 }
 
 .catalog__content {
@@ -127,9 +126,10 @@ body {
     user-select: none;
 }
 .filter-age__input {
-    position: absolute;
+    /* position: absolute;
     z-index: -1;
-    opacity: 0;    
+    opacity: 0;     */
+    display: none;
 }
 .filter-age__name::after {
     content: '';
@@ -173,8 +173,10 @@ body {
 }
 @media (max-width: 991px) {
     .filter-age {
-        /* flex-wrap: nowrap;
-        overflow-x: scroll; */
+        width: 100%;
+        overflow: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
     }
 }
 
@@ -732,4 +734,40 @@ body {
     .catalog__grid {
         gap: 20px;
     }         
+}
+
+/* Remove default bullets */
+.catalog-menu {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.catalog-menu li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.catalog-menu__fold>a {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+.catalog-menu__fold>a::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../img/collapse_arrow_up.svg);
+}
+.catalog-menu__fold_open::after {
+    transform: rotate(180deg);
+}
+.catalog-menu__nested {
+    display: none;
+}
+.catalog-menu__active {
+    display: block;
 }
