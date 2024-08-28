@@ -77,14 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    var toggler = document.querySelectorAll('.catalog-menu__fold>a');
-    var i;
-
+    let toggler = document.querySelectorAll('.catalog-menu__caret');
+    let i;
     for (i = 0; i < toggler.length; i++) {
-    toggler[i].addEventListener("click", function() {
-        this.parentElement.querySelector(".catalog-menu__nested").classList.toggle('catalog-menu__active');
-        this.classList.toggle('catalog-menu__fold_open');
-    });
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".catalog-menu__nested").classList.toggle('catalog-menu__nested_open');
+            this.classList.toggle('catalog-menu__caret_open');
+        });
     }
 
 });
